@@ -21,6 +21,9 @@
     <ClInclude Include="kmem.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="kterm.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Text Include="order.txt" />
@@ -33,6 +36,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Mem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="kterm.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

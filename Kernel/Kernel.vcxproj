@@ -94,6 +94,7 @@
   <ItemGroup>
     <ClInclude Include="init.h" />
     <ClInclude Include="kmem.h" />
+    <ClInclude Include="kterm.h" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="order.txt" />
@@ -101,6 +102,7 @@
   <ItemGroup>
     <ClCompile Include="clib.cpp" />
     <ClCompile Include="init.cpp" />
+    <ClCompile Include="kterm.cpp" />
     <ClCompile Include="Mem.cpp" />
   </ItemGroup>
   <ItemGroup>
