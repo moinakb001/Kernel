@@ -1,6 +1,6 @@
 // init.cpp : définit le point d'entrée pour l'application console.
 //
-
+#include "Terminal.h"
 #include "init.h"
 #include <stddef.h>
 #include "kmem.h"
@@ -17,8 +17,12 @@ __declspec(naked) void multiboot_entry(void)
 			dd(LOADBASE); load address
 			dd(00); load end address : not used
 			dd(00); bss end addr : not used
-			dd(HEADER_ADRESS + 0x20); entry_addr: equ kernel entry
-			; 0x20 is the size of multiboot heeader
+			dd(HEADER_ADRESS + 0x30); entry_addr: equ kernel entry
+			
+			dd(0x00000000)
+			dd(00)
+			dd(00)
+			dd(00)
 
 		kernel_entry :
 		mov     esp, KERNEL_STACK; Setup the stack
@@ -98,12 +102,27 @@ void trace(unsigned int MaxFrames)
 }
 
  void main(unsigned long magic, unsigned long addr)
-{
+ {
+	// Terminal tr=Terminal();
+	Terminal t = Terminal(30,10,5,5,Terminal::makeColor(Terminal::black,Terminal::red));
+	t.printf("asd");
+	t.printf("asdasd");
+	for (size_t i = 0; i < 70; i++)
+	{
+		t.printf("asd");
+	}
+	for (size_t i = 0; i < 70; i++)
+	{
+		t.printf("efg");
+	}
+	//t.scroll();
+	return;
 	char *string = "Hello World from GRUB and PE kernel !", *ch;
 	unsigned short *vidmem = (unsigned short *)0xB8000;
 	int i;
 	Kernel::initMem();
 	//float a = 1.1;
+	
 	if (magic == MULTIBOOT_BOOTLOADER_MAGIC){
 
 		char *arr[10];

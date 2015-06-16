@@ -93,8 +93,9 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="init.h" />
+    <ClInclude Include="IO.h" />
     <ClInclude Include="kmem.h" />
-    <ClInclude Include="kterm.h" />
+    <ClInclude Include="Terminal.h" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="order.txt" />
@@ -102,8 +103,8 @@
   <ItemGroup>
     <ClCompile Include="clib.cpp" />
     <ClCompile Include="init.cpp" />
-    <ClCompile Include="kterm.cpp" />
     <ClCompile Include="Mem.cpp" />
+    <ClCompile Include="Terminal.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="kernel.map" />
