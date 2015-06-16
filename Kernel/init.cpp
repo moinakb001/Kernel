@@ -48,6 +48,7 @@ void printf(char * arr){
 			i = i + 0;
 		}
 		else{
+			//he
 			//hi
 			i = (i + 80)/80*80;
 			i--;
