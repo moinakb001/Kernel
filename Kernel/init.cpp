@@ -52,6 +52,7 @@ void printf(char * arr){
 			i = (i + 80)/80*80;
 			i--;
 		}
+		//hg
 	}
 }
 char * itoa(int a, char * arr){
