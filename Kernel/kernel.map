@@ -1,0 +1,56 @@
+ Kernel
+
+ Timestamp is 557fcab6 (Tue Jun 16 00:05:26 2015)
+
+ Preferred load address is 00100000
+
+ Start         Length     Name                   Class
+ 0001:00000000 00000660H .text$mn                CODE
+ 0002:00000000 000000c9H .rdata                  DATA
+ 0002:000000cc 00000084H .rdata$debug            DATA
+ 0003:00000000 00000008H .data                   DATA
+ 0003:00000008 00000008H .bss                    DATA
+ 0004:00000000 0000000aH end                     DATA
+
+  Address         Publics by Value              Rva+Base       Lib:Object
+
+ 0000:00000000       ___guard_flags             00000000     <absolute>
+ 0000:00000000       ___safe_se_handler_table   00000000     <absolute>
+ 0000:00000000       ___guard_fids_table        00000000     <absolute>
+ 0000:00000000       ___safe_se_handler_count   00000000     <absolute>
+ 0000:00000000       ___guard_fids_count        00000000     <absolute>
+ 0001:00000000       ?multiboot_entry@@YAXXZ    00100400 f   init.obj
+ 0001:00000040       ?itoa@@YAPADHPAD@Z         00100440 f   init.obj
+ 0001:000000b0       ?printf@@YAXPAD@Z          001004b0 f   init.obj
+ 0001:00000150       _main                      00100550 f   init.obj
+ 0001:00000470       ?Num@Kernel@@YAHXZ         00100870 f   Mem.obj
+ 0001:000004b0       ?free@Kernel@@YAXPAX@Z     001008b0 f   Mem.obj
+ 0001:00000530       ?initMem@Kernel@@YAXXZ     00100930 f   Mem.obj
+ 0001:00000580       ?malloc@Kernel@@YAPAXI@Z   00100980 f   Mem.obj
+ 0003:00000000       __fltused                  00101000     clib.obj
+ 0003:00000004       ?ras@Kernel@@3PADA         00101004     Mem.obj
+ 0003:00000008       ?i@@3HA                    00101008     init.obj
+ 0003:0000000c       ?a@Kernel@@3HA             0010100c     Mem.obj
+ 0004:00000000       ?initPtrMem@Kernel@@3Umemptr_t@@A 00101400     Mem.obj
+
+ entry point at        0000:00000000
+
+ Static symbols
+
+ 0002:00000038       $SG2711                    00100c38     init.obj
+ 0002:00000044       $SG2721                    00100c44     init.obj
+ 0002:00000054       $SG2731                    00100c54     init.obj
+ 0002:00000058       $SG2737                    00100c58     init.obj
+ 0002:00000080       $SG2749                    00100c80     init.obj
+ 0002:00000084       $SG2751                    00100c84     init.obj
+ 0002:00000088       $SG2753                    00100c88     init.obj
+ 0002:0000008c       $SG2762                    00100c8c     init.obj
+ 0002:00000090       $SG2767                    00100c90     init.obj
+ 0002:00000094       $SG2769                    00100c94     init.obj
+ 0002:00000098       $SG2771                    00100c98     init.obj
+ 0002:0000009c       $SG2780                    00100c9c     init.obj
+ 0002:000000a0       $SG2785                    00100ca0     init.obj
+ 0002:000000a4       $SG2787                    00100ca4     init.obj
+ 0002:000000a8       $SG2789                    00100ca8     init.obj
+ 0002:000000ac       $SG2700                    00100cac     Mem.obj
+ 0002:000000c4       $SG2750                    00100cc4     Mem.obj
