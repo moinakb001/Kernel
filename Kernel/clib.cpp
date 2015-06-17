@@ -1,3 +1,5 @@
+#pragma once
+
 void* __cdecl ::operator new (unsigned int size){ return 0; }
 void* __cdecl operator new[](unsigned int size) { return 0; }
 void __cdecl ::operator delete (void * p) {}

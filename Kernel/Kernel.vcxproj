@@ -92,6 +92,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="CPU.h" />
     <ClInclude Include="init.h" />
     <ClInclude Include="IO.h" />
     <ClInclude Include="kmem.h" />
@@ -102,6 +103,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="clib.cpp" />
+    <ClCompile Include="CPU.cpp" />
     <ClCompile Include="init.cpp" />
     <ClCompile Include="Mem.cpp" />
     <ClCompile Include="Terminal.cpp" />
