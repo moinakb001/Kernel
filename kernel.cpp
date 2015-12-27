@@ -13,7 +13,7 @@
 #if !defined(__i386__)
 #error "This tutorial needs to be compiled with a ix86-elf compiler"
 #endif
- 
+ #include "terminal.h"
 
 extern "C" /* Use C linkage for kernel_main. */
 void kernel_main() {
