@@ -15,7 +15,7 @@ void Terminal::setColor(vga_color_e fg,vga_color_e bg) {
 void Terminal::setPosition(uint32_t x, uint32_t y){
 	this->position=(y*VGA_WIDTH)+x;
 }
-void Terminal::putc(uint8_t c){
+void Terminal::putc(char c){
 	if(c=='\n'){
 		position=(position/VGA_WIDTH);
 		position++;
@@ -36,10 +36,10 @@ void Terminal::puts(char * str){
 		putc(str[i]);
 	}
 }
-void printf(char *fmt, ...){
+void Terminal::printf(char *fmt, ...){
 	va_list vl;
 	va_start(vl,fmt);
-	uint32_t len=strlen(str);
+	uint32_t len=strlen((uint8_t *)fmt);
 	for(uint32_t i=0;i<len;i++){
 		if(fmt[i]=='%'){
 			i++;
@@ -58,7 +58,7 @@ void printf(char *fmt, ...){
 void Terminal::scroll(){
 	memmove((void *)(*vidMem[0]),(void *)(*vidMem[VGA_WIDTH]),VGA_WIDTH*(VGA_HEIGHT-1)*sizeof(vgaChar_t));
 	for(uint32_t i=0;i<VGA_WIDTH;i++){
-		vidmem[i+VGA_WIDTH*(VGA_HEIGHT-1)].charac=' ';
-		vidmem[i+VGA_WIDTH*(VGA_HEIGHT-1)].color=color;
+		vidMem[i+VGA_WIDTH*(VGA_HEIGHT-1)].charac=' ';
+		vidMem[i+VGA_WIDTH*(VGA_HEIGHT-1)].color=color;
 	}
 }

@@ -1,6 +1,6 @@
 #include "string.h"
 namespace{
-	 uint8_t * message="FUCK OFF NOT IMPLEMENTED";
+
 }
 namespace std{
 	void * memcpy( void  * destination,  void * source, uint32_t num ){
@@ -141,7 +141,7 @@ namespace std{
 		return ptr;
 	}
 	uint8_t * strerror ( int32_t errnum ){
-		return message;
+		return (uint8_t *)0;
 	}
 	uint32_t strlen (  uint8_t * str ){
 		uint32_t i=0;
