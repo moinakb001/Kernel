@@ -17,6 +17,15 @@ void init_serial() {
    outb(COM + 2, 0xC7);    // Enable FIFO, clear them, with 14-byte threshold
    outb(COM + 4, 0x0B);    // IRQs enabled, RTS/DSR set
 }
+int serial_received() {
+   return inb(PORT + 5) & 1;
+}
+ 
+char read_serial() {
+   while (serial_received() == 0);
+ 
+   return inb(PORT);
+}
 int is_transmit_empty() {
    return inb(COM + 5) & 0x20;
 }
@@ -40,7 +49,7 @@ extern "C" void kernel_main() {
 	term.printf("%sFU\n%s","kjg\n iyo","23");
 	term.scroll();
 	while(true){
-		write_serial_str("HI!!!!\r\n");
+		write_serial(read_serial());
 		term.printf("%sFU\n%s","kjg\n iyo","23");
 	}
 	
