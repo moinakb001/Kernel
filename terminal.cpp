@@ -1,6 +1,6 @@
 #include "terminal.h"
 using namespace std;
-Terminal::Terminal(vga_color_e bg=COLOR_BLACK, vga_color_e fg=COLOR_WHITE){
+Terminal::Terminal(vga_color_e bg, vga_color_e fg){
 	this->position=0;
 	setColor(fg, bg) ;
 	for(uint32_t i=0;i<this->VGA_WIDTH*this->VGA_HEIGHT;i++){
@@ -50,13 +50,13 @@ void Terminal::printf(char *fmt, ...){
 					break;
 			}
 		}else{
-			putc(str[i]);
+			putc(fmt[i]);
 		}
 	}
 	va_end(vl);
 }
 void Terminal::scroll(){
-	memmove((void *)(*vidMem[0]),(void *)(*vidMem[VGA_WIDTH]),VGA_WIDTH*(VGA_HEIGHT-1)*sizeof(vgaChar_t));
+	memmove((void *)(&vidMem[0]),(void *)(&vidMem[VGA_WIDTH]),VGA_WIDTH*(VGA_HEIGHT-1)*sizeof(vgaChar_t));
 	for(uint32_t i=0;i<VGA_WIDTH;i++){
 		vidMem[i+VGA_WIDTH*(VGA_HEIGHT-1)].charac=' ';
 		vidMem[i+VGA_WIDTH*(VGA_HEIGHT-1)].color=color;
