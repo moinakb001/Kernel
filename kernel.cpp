@@ -18,13 +18,13 @@ void init_serial() {
    outb(COM + 4, 0x0B);    // IRQs enabled, RTS/DSR set
 }
 int serial_received() {
-   return inb(PORT + 5) & 1;
+   return inb(COM + 5) & 1;
 }
  
 char read_serial() {
    while (serial_received() == 0);
  
-   return inb(PORT);
+   return inb(COM);
 }
 int is_transmit_empty() {
    return inb(COM + 5) & 0x20;
