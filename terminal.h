@@ -33,7 +33,7 @@ class Terminal{
 			COLOR_LIGHT_BROWN = 14,
 			COLOR_WHITE = 15,
 		} vga_color_e;
-		Terminal(vga_color_e bg=0, vga_color_e fg=15);
+		Terminal(vga_color_e bg=COLOR_BLACK, vga_color_e fg=COLOR_WHITE);
 		void setColor(vga_color_e fg, vga_color_e bg) ;
 		void setPosition(uint32_t x, uint32_t y);
 		void putc(char c);
@@ -43,6 +43,6 @@ class Terminal{
 		
 	
 	
-}
-}
+	};
+};
 #endif

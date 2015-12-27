@@ -1,5 +1,5 @@
 #include "terminal.h"
-
+using namespace std;
 Terminal::Terminal(vga_color_e bg=0, vga_color_e fg=15){
 	this->position=0;
 	setColor(fg, bg) ;
