@@ -1,6 +1,7 @@
 #ifndef TERMINAL_H
 #define TERMINAL_H
-#include <cstdint>
+#include <stdint.h>
+#include <stdarg.h> 
 #include "string.h"
 class Terminal{
 	private:
@@ -34,9 +35,11 @@ class Terminal{
 		Terminal(vga_color_e bg=vga_color_e::COLOR_BLACK, vga_color_e fg=vga_color_e::COLOR_WHITE);
 		void setColor(vga_color_e fg, vga_color_e bg) ;
 		void setPosition(uint32_t x, uint32_t y);
-		void putChar(char c);
+		void putc(char c);
+		void puts(char * str);
 		void printf(char * format,...);
 		void scroll();
+		
 	
 	
 }

@@ -1,4 +1,4 @@
-#include <string.h>
+#include "string.h"
 namespace{
 	uint8_t * message="FUCK OFF NOT IMPLEMENTED";
 }
@@ -105,14 +105,30 @@ namespace std{
 
 	
 	
-	void * memchr ( void * ptr, int32_t value, uint32_t num );
-	uint8_t * strchr ( uint8_t * str, int32_t character );
-	uint32_t strcspn ( const uint8_t * str1, const uint8_t * str2 );
-	uint8_t * strpbrk ( uint8_t * str1, const uint8_t * str2 );
-	uint8_t * strrchr ( uint8_t * str, int32_t character );
-	uint32_t strspn ( const uint8_t * str1, const uint8_t * str2 );
-	uint8_t * strstr ( uint8_t * str1, const uint8_t * str2 );
-	uint8_t * strtok ( uint8_t * str, const uint8_t * delimiters );
+	void * memchr ( void * ptr, int32_t value, uint32_t num ){
+		
+	}
+	uint8_t * strchr ( uint8_t * str, int32_t character ){
+		
+	}
+	uint32_t strcspn ( const uint8_t * str1, const uint8_t * str2 ){
+		
+	}
+	uint8_t * strpbrk ( uint8_t * str1, const uint8_t * str2 ){
+		
+	}
+	uint8_t * strrchr ( uint8_t * str, int32_t character ){
+		
+	}
+	uint32_t strspn ( const uint8_t * str1, const uint8_t * str2 ){
+		
+	}
+	uint8_t * strstr ( uint8_t * str1, const uint8_t * str2 ){
+		
+	}
+	uint8_t * strtok ( uint8_t * str, const uint8_t * delimiters ){
+		
+	}
 
 	
 	
