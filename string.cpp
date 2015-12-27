@@ -49,7 +49,7 @@ namespace std{
 		uint8_t * destArr=(uint8_t * )destination;
 		uint8_t * srcArr=(uint8_t * )source;
 		uint32_t len=strlen(destination);
-		for(i=len;srcArr[i-len]!=0;i++){
+		for(uint32_t i=len;srcArr[i-len]!=0;i++){
 			destArr[i]=srcArr[i-len];
 		}
 		return destination;
@@ -59,7 +59,7 @@ namespace std{
 		uint8_t * destArr=(uint8_t * )destination;
 		uint8_t * srcArr=(uint8_t * )source;
 		uint32_t len=strlen(destination);
-		for(i=len;srcArr[i-len]!=0&&i<num+len;i++){
+		for(uint32_t i=len;srcArr[i-len]!=0&&i<num+len;i++){
 			destArr[i]=srcArr[i-len];
 		}
 		return destination;

@@ -1,6 +1,6 @@
 #include "terminal.h"
 
-Terminal::Terminal(vga_color_e bg=vga_color_e::COLOR_BLACK, vga_color_e fg=vga_color_e::COLOR_WHITE){
+Terminal::Terminal(vga_color_e bg=0, vga_color_e fg=15){
 	this->position=0;
 	setColor(fg, bg) ;
 	for(uint32_t i=0;i<this->VGA_WIDTH*this->VGA_HEIGHT;i++){

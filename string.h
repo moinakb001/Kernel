@@ -29,4 +29,4 @@ void * memset ( void * ptr, int32_t value, uint32_t num );
 uint8_t * strerror ( int32_t errnum );
 uint32_t strlen ( const uint8_t * str );
 }
-#endifs
+#endif

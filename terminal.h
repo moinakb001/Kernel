@@ -12,7 +12,7 @@ class Terminal{
 		uint32_t position;
 		uint8_t color;
 		const uint32_t VGA_WIDTH = 80,VGA_HEIGHT = 25;
-		const vgaChar_t * vidMem=(vgaChar_t *)0xb8000;
+		vgaChar_t * vidMem=(vgaChar_t *)0xb8000;
 	public:
 		typedef enum  {
 			COLOR_BLACK = 0,
@@ -32,7 +32,7 @@ class Terminal{
 			COLOR_LIGHT_BROWN = 14,
 			COLOR_WHITE = 15,
 		} vga_color_e;
-		Terminal(vga_color_e bg=vga_color_e::COLOR_BLACK, vga_color_e fg=vga_color_e::COLOR_WHITE);
+		Terminal(vga_color_e bg=0, vga_color_e fg=15);
 		void setColor(vga_color_e fg, vga_color_e bg) ;
 		void setPosition(uint32_t x, uint32_t y);
 		void putc(char c);
