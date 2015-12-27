@@ -14,9 +14,8 @@
 #error "This tutorial needs to be compiled with a ix86-elf compiler"
 #endif
  #include "terminal.h"
-
-extern "C" /* Use C linkage for kernel_main. */
-void kernel_main() {
+using namespace std;
+extern "C" void kernel_main() {
 	/* Initialize terminal interface */
 	Terminal term=Terminal();
 	term.puts("as\nkk\nsaasf");

@@ -3,6 +3,7 @@
 #include <stdint.h>
 #include <stdarg.h> 
 #include "string.h"
+namespace std{
 class Terminal{
 	private:
 		typedef struct{
@@ -42,5 +43,6 @@ class Terminal{
 		
 	
 	
+}
 }
 #endif
