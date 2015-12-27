@@ -46,7 +46,6 @@ void Terminal::printf(char *fmt, ...){
 			switch(fmt[i]){
 				case 's':
 					puts(va_arg(vl,char *));
-					i++;
 					break;
 			}
 		}else{
