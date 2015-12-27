@@ -19,4 +19,5 @@ extern "C" void kernel_main() {
 	/* Initialize terminal interface */
 	Terminal term=Terminal();
 	term.puts("as\nkk\nsaasf");
+	term.scroll();
 }
