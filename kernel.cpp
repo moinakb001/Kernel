@@ -18,6 +18,7 @@ using namespace std;
 extern "C" void kernel_main() {
 	/* Initialize terminal interface */
 	Terminal term=Terminal();
-	term.puts("as\nkk\nsaasf");
+	term.setColor(COLOR_LIGHT_MAGENTA,COLOR_GREEN);
+	term.printf("%sFU\n%s","kjg\n iyo","23");
 	term.scroll();
 }
