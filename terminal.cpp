@@ -1,6 +1,6 @@
 #include "terminal.h"
 using namespace std;
-Terminal::Terminal(vga_color_e bg=0, vga_color_e fg=15){
+Terminal::Terminal(vga_color_e bg=COLOR_BLACK, vga_color_e fg=COLOR_WHITE){
 	this->position=0;
 	setColor(fg, bg) ;
 	for(uint32_t i=0;i<this->VGA_WIDTH*this->VGA_HEIGHT;i++){
@@ -31,7 +31,7 @@ void Terminal::putc(char c){
 	}
 }
 void Terminal::puts(char * str){
-	uint32_t len=strlen(str);
+	uint32_t len=strlen((uint8_t *)str);
 	for(uint32_t i=0;i<len;i++){
 		putc(str[i]);
 	}
