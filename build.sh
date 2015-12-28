@@ -13,7 +13,7 @@ do
 	fi
 	if [ "${file##*.}" == "cpp" ];
 	then
-		i686-elf-g++ -c "$file" -o "./build/objfiles/${file%.*}$i.o" -ffreestanding -O2 -Wall -Wextra -fno-exceptions -fno-rtti
+		clang++ -target i686-elf -c "$file" -o "./build/objfiles/${file%.*}$i.o" -ffreestanding -O2 -Wall -Wextra -fno-exceptions -fno-rtti
 	fi
 	i=i+1
 done
