@@ -4,6 +4,7 @@
 #include <stdarg.h> 
 #include "io.h"
 #include "string.h"
+namespace std{
 class STerminal{
 	private:
 		char buffer[1000];
@@ -23,4 +24,5 @@ class STerminal{
 	
 	
 };
+}
 #endif
