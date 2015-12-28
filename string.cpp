@@ -1,5 +1,5 @@
 #include "string.h"
-
+	using namespace std;
 	extern "C" void * memcpy( void  * destination,  void * source, uint32_t num ){
 		uint8_t * destArr=(uint8_t * )destination;
 		uint8_t * srcArr=(uint8_t * )source;
