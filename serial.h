@@ -20,7 +20,7 @@ class STerminal{
 		void putc(char c);
 		void puts(char * str);
 		void printf(char * fmt,...);
-		void repl(uint32_t num,void (*eval)(char *));
+		void repl(uint32_t num,void (*eval)(char *,STerminal *));
 	
 	
 };

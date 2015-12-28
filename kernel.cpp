@@ -11,7 +11,7 @@ using namespace std;
 
 void eval(char * str, STerminal * sterm){
 	if(1==1){
-		sterm.puts("hello\n");
+		sterm->puts("hello\n");
 	}
 }
 extern "C" void kernel_main() {
