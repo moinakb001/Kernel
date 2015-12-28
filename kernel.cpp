@@ -21,6 +21,6 @@ extern "C" void kernel_main() {
 
 	int32_t i=0;
 	while(true){
-		term.write_serial("FML PLS");
+		term.write_serial('kjh');
 	}
 }

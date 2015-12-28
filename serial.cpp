@@ -15,7 +15,10 @@ int STerminal::serial_received() {
 }
  
 char STerminal::read_serial() {
-   while (serial_received() == 0);
+   uint32_t i=0;
+   while (serial_received() == 0){
+	   i++;
+   }
 	char c=inb(COM);
 	buffer[index]=c;
 	index++;
@@ -32,6 +35,7 @@ void STerminal::write_serial(char a) {
 }
 STerminal::STerminal(){
 	index=0;
+	buffer=(char *)0x1000000;
 	init_serial();
 }
 char * STerminal::readln(){

@@ -7,7 +7,7 @@
 namespace std{
 class STerminal{
 	private:
-		char buffer[1000];
+		char* buffer;
 		uint32_t index;
 		void init_serial() ;
 		int serial_received();
