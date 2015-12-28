@@ -9,9 +9,9 @@
 using namespace std;
 
 
-void eval(char * str){
+void eval(char * str, STerminal * sterm){
 	if(1==1){
-		term.puts("hello\n");
+		sterm.puts("hello\n");
 	}
 }
 extern "C" void kernel_main() {

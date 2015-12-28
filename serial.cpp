@@ -74,16 +74,16 @@ void STerminal::printf(char *fmt, ...){
 	}
 	va_end(vl);
 }
-void STerminal::repl(uint32_t num,void (*eval)(char *)){
+void STerminal::repl(uint32_t num,void (*eval)(char *,STerminal *)){
 	if(num==0){
 		while(true){
 			putc('>');
-			(*eval)(readln());
+			(*eval)(readln(),this);
 		}
 	}else{
 		for(uint32_t i=0;i<num;i++){
 			putc('>');
-			(*eval)(readln());
+			(*eval)(readln(), this);
 		}
 	}
 }
