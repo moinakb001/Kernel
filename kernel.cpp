@@ -18,6 +18,9 @@ extern "C" void kernel_main() {
 	/* Initialize terminal interface */
 	STerminal term;
 	term=STerminal();
-	term.repl(0,eval);
-	
+	term.repl(10,&eval);
+	int32_t i=0;
+	while(true){
+		term.puts("FML PLS");
+	}
 }
