@@ -10,7 +10,7 @@ using namespace std;
 
 STerminal term;
 void eval(char * str){
-	if(strcmp(str,"hi")==0){
+	if(strcmp((uint8_t *)str,(uint8_t *)"hi")==0){
 		term.puts("hello\n");
 	}
 }
