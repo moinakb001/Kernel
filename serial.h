@@ -22,5 +22,5 @@ class STerminal{
 		void repl(uint32_t num,void (*eval)(char *));
 	
 	
-}
+};
 #endif

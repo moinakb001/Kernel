@@ -1,5 +1,6 @@
 #include "serial.h"
 #define COM 0x3f8   /* COM1 */
+using namespace std;
 void STerminal::init_serial() {
    outb(COM + 1, 0x00);    // Disable all interrupts
    outb(COM + 3, 0x80);    // Enable DLAB (set baud rate divisor)
@@ -49,7 +50,7 @@ void STerminal::putc(char c){
 	}
 	write_serial(c);
 }
-void puts(char * str){
+void STerminal::puts(char * str){
 	uint32_t len=strlen((uint8_t *)str);
 	for(uint32_t i=0;i<len;i++){
 		putc(str[i]);
